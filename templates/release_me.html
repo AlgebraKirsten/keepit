@@ -1,0 +1,20 @@
+{% load static %}
+<head>
+<link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+<title>Keepit - Release</title>
+</head>
+<body>
+    <form action="/release_me" method="POST">
+        {% csrf_token %}
+    <button type="submit" onclick="logIt()">Release New Code</button>
+    </form>
+</body>
+
+<footer>
+
+</footer>
+<script>
+    function logIt() {
+        console.log("Release triggered");
+    }
+</script>
